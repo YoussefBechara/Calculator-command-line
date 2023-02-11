@@ -1,0 +1,25 @@
+import math
+def calculator():
+    start = input('type "ON" to turn on the calculator: ').lower()
+    end = ''
+    while start == 'on' and end != 'off':
+        number1 = int(input('Enter the first number: '))
+        action = input('Enter the sign of calculation: ').lower()
+        number2 = int(input('Enter the second number: '))
+        if action == '+' or action == 'add':
+            print(f'{number1} + {number2} = {number1 + number2}')
+        elif action == '-' or action == 'substract':
+            print(f'{number1} - {number2} = {number1 - number2}')
+        elif action == '*' or action == 'multiply':
+            print(f'{number1} * {number2} = {number1 * number2}')
+        elif action == '//' or action == 'divide':
+            print(f'{number1} // {number2} = {number1 // number2}')
+        elif action == '**' or action == 'power':
+            print(f'{number1} ** {number2} = {number1 ** number2}')
+        else:
+            print('Error! You have typed something invalid...')
+        end = input('If you want to stop, type "OFF" to turn off the calculator: ').lower()
+    print('Calculator has been turned off...')
+
+
+calculator()
